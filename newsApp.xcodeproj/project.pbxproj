@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		198F3012A42C9D6F9B22923D /* Pods_newsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8D836229D71685E1CD9488 /* Pods_newsApp.framework */; };
 		F586FB0725CAFA37006042CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586FB0625CAFA37006042CE /* AppDelegate.swift */; };
 		F586FB0925CAFA37006042CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586FB0825CAFA37006042CE /* ViewController.swift */; };
 		F586FB0C25CAFA37006042CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F586FB0A25CAFA37006042CE /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08833803BBE89DCF9122B839 /* Pods-newsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newsApp.release.xcconfig"; path = "Target Support Files/Pods-newsApp/Pods-newsApp.release.xcconfig"; sourceTree = "<group>"; };
+		81AA6DCF5BB0DA32591CE47E /* Pods-newsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newsApp.debug.xcconfig"; path = "Target Support Files/Pods-newsApp/Pods-newsApp.debug.xcconfig"; sourceTree = "<group>"; };
+		8A8D836229D71685E1CD9488 /* Pods_newsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F586FB0325CAFA37006042CE /* newsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F586FB0625CAFA37006042CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F586FB0825CAFA37006042CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,17 +47,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				198F3012A42C9D6F9B22923D /* Pods_newsApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		655C9657C2F4CCEA518CDB6A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8A8D836229D71685E1CD9488 /* Pods_newsApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C100B48BB26A66DEDAE2F737 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81AA6DCF5BB0DA32591CE47E /* Pods-newsApp.debug.xcconfig */,
+				08833803BBE89DCF9122B839 /* Pods-newsApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F586FAFA25CAFA37006042CE = {
 			isa = PBXGroup;
 			children = (
 				F586FB0525CAFA37006042CE /* newsApp */,
 				F586FB0425CAFA37006042CE /* Products */,
+				C100B48BB26A66DEDAE2F737 /* Pods */,
+				655C9657C2F4CCEA518CDB6A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F586FB1525CAFA37006042CE /* Build configuration list for PBXNativeTarget "newsApp" */;
 			buildPhases = (
+				27239587BDCA59703517D82A /* [CP] Check Pods Manifest.lock */,
 				F586FAFF25CAFA37006042CE /* Sources */,
 				F586FB0025CAFA37006042CE /* Frameworks */,
 				F586FB0125CAFA37006042CE /* Resources */,
+				EF1F43C843E09EC8E7F14775 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +203,49 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		27239587BDCA59703517D82A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-newsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF1F43C843E09EC8E7F14775 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-newsApp/Pods-newsApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-newsApp/Pods-newsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F586FAFF25CAFA37006042CE /* Sources */ = {
@@ -324,6 +394,7 @@
 		};
 		F586FB1625CAFA37006042CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81AA6DCF5BB0DA32591CE47E /* Pods-newsApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -338,6 +409,7 @@
 		};
 		F586FB1725CAFA37006042CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08833803BBE89DCF9122B839 /* Pods-newsApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

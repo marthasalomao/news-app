@@ -6,6 +6,7 @@
 //  Copyright © 2021 Martha Salomão de Moraes. All rights reserved.
 //
 
+import Kingfisher
 import UIKit
 
 class NewsTableViewCell: UITableViewCell {
@@ -21,7 +22,7 @@ class NewsTableViewCell: UITableViewCell {
         lbTitle.text = news.title
         lbDescription.text = news.description
         let url = URL(string: news.urlToImage)
-        //ivNews.kf.setImage(with: url)
+        ivNews.kf.setImage(with: url)
     }
     
 }
