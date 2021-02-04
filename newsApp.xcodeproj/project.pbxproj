@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		198F3012A42C9D6F9B22923D /* Pods_newsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A8D836229D71685E1CD9488 /* Pods_newsApp.framework */; };
+		F51BFCF825CC6B6D00DBAC93 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F51BFCF625CC6B6D00DBAC93 /* WebViewController.swift */; };
+		F51BFCF925CC6B6D00DBAC93 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F51BFCF725CC6B6D00DBAC93 /* WebViewController.xib */; };
 		F586FB0725CAFA37006042CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586FB0625CAFA37006042CE /* AppDelegate.swift */; };
 		F586FB0925CAFA37006042CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586FB0825CAFA37006042CE /* ViewController.swift */; };
 		F586FB0C25CAFA37006042CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F586FB0A25CAFA37006042CE /* Main.storyboard */; };
@@ -26,6 +28,8 @@
 		08833803BBE89DCF9122B839 /* Pods-newsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newsApp.release.xcconfig"; path = "Target Support Files/Pods-newsApp/Pods-newsApp.release.xcconfig"; sourceTree = "<group>"; };
 		81AA6DCF5BB0DA32591CE47E /* Pods-newsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-newsApp.debug.xcconfig"; path = "Target Support Files/Pods-newsApp/Pods-newsApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8A8D836229D71685E1CD9488 /* Pods_newsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_newsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F51BFCF625CC6B6D00DBAC93 /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		F51BFCF725CC6B6D00DBAC93 /* WebViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
 		F586FB0325CAFA37006042CE /* newsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = newsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F586FB0625CAFA37006042CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F586FB0825CAFA37006042CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +72,6 @@
 				81AA6DCF5BB0DA32591CE47E /* Pods-newsApp.debug.xcconfig */,
 				08833803BBE89DCF9122B839 /* Pods-newsApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +133,8 @@
 				F586FB2725CB1749006042CE /* NewsTableViewCell.swift */,
 				F586FB2825CB1749006042CE /* NewsTableViewCell.xib */,
 				F586FB0F25CAFA37006042CE /* LaunchScreen.storyboard */,
+				F51BFCF625CC6B6D00DBAC93 /* WebViewController.swift */,
+				F51BFCF725CC6B6D00DBAC93 /* WebViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +203,7 @@
 				F586FB1125CAFA37006042CE /* LaunchScreen.storyboard in Resources */,
 				F586FB0E25CAFA37006042CE /* Assets.xcassets in Resources */,
 				F586FB2A25CB1749006042CE /* NewsTableViewCell.xib in Resources */,
+				F51BFCF925CC6B6D00DBAC93 /* WebViewController.xib in Resources */,
 				F586FB0C25CAFA37006042CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,15 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-newsApp-checkManifestLockResult.txt",
 			);
@@ -253,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F586FB2625CAFEB6006042CE /* CustomError.swift in Sources */,
+				F51BFCF825CC6B6D00DBAC93 /* WebViewController.swift in Sources */,
 				F586FB2425CAFEA2006042CE /* Result.swift in Sources */,
 				F586FB2925CB1749006042CE /* NewsTableViewCell.swift in Sources */,
 				F586FB2025CAFE86006042CE /* Router.swift in Sources */,

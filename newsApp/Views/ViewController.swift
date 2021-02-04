@@ -62,13 +62,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 210
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let new = news[indexPath.row]
-//        let showNews = WallpaperViewController(wallpaper: wallpaper)
-//        navigationController?.pushViewController(showNews, animated: true)
-//
-//    }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let content = articles[indexPath.row]
+        let showNews = WebViewController()
+        navigationController?.pushViewController(showNews, animated: true)
+    }
 }
 
 
