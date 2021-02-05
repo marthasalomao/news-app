@@ -7,29 +7,37 @@
 //
 
 import UIKit
+import WebKit
 
-class WebViewController: UIViewController {
+class WebViewController: UIViewController, WKNavigationDelegate {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - Outlets
+    @IBOutlet weak var webView: WKWebView!
+    
+    // MARK: - Properties
+    var article: Article
+    
+    // MARK: - Initializers
+    required init?(coder: NSCoder) {
+        fatalError("teste")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    init(article: Article) {
+        self.article = article
+        super.init(nibName: nil, bundle: nil)
+        
     }
-    */
-
+    
+    // MARK: - Overrides
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        webView.navigationDelegate = self
+        view.addSubview(webView)
+        
+        guard let articleURL = article.url else { return }
+        guard let url = URL(string: articleURL) else { return }
+        webView.load(URLRequest(url: url))
+        webView.allowsBackForwardNavigationGestures = true
+    }
+    
 }

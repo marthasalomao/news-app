@@ -59,13 +59,14 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 210
+        return 144
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let content = articles[indexPath.row]
-        let showNews = WebViewController()
+        let showNews = WebViewController(article: content)
         navigationController?.pushViewController(showNews, animated: true)
+        
     }
 }
 

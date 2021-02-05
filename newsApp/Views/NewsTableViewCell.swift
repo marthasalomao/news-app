@@ -13,15 +13,14 @@ class NewsTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
     @IBOutlet weak var lbTitle: UILabel!
-    @IBOutlet weak var lbDescription: UILabel!
     @IBOutlet weak var buttonFavorite: UIButton!
     @IBOutlet weak var ivNews: UIImageView!
     
     // MARK: - Methods
     func prepare(news: Article) {
         lbTitle.text = news.title
-        lbDescription.text = news.description
-        let url = URL(string: news.urlToImage)
+        guard let imageURL = news.urlToImage else { return }
+        let url = URL(string: imageURL)
         ivNews.kf.setImage(with: url)
     }
     
