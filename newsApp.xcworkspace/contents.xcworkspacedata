@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:FavoriteViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:newsApp.xcodeproj">
    </FileRef>
    <FileRef

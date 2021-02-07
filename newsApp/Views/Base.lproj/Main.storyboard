@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JQm-rN-Nth">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wa6-Db-n7B">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -45,12 +45,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="765.60000000000002" y="28.335832083958024"/>
+            <point key="canvasLocation" x="1104.8" y="28.335832083958024"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favoritos -->
+        <scene sceneID="xKr-kw-B0W">
+            <objects>
+                <viewController id="U2L-rk-wVE" customClass="FavoriteViewController" customModule="newsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MXF-j8-8RZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pP9-Ci-QxR">
+                                <rect key="frame" x="0.0" y="-13" width="375" height="680"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xAj-Nq-U6M"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favoritos " id="cJN-yv-5KY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gZ0-11-Oeq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1124" y="790"/>
+        </scene>
+        <!--Notícias-->
         <scene sceneID="shq-GE-iWo">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JQm-rN-Nth" sceneMemberID="viewController">
+                <navigationController title="Notícias" automaticallyAdjustsScrollViewInsets="NO" id="JQm-rN-Nth" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Notícias " id="rOS-Yg-mpa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yoK-qA-QBa">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -58,12 +82,49 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qkD-mI-Sxq"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TiS-1i-bqq"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KEf-5M-R9A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="24" y="29.685157421289357"/>
+            <point key="canvasLocation" x="362.39999999999998" y="29.23538230884558"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="H7q-fu-s6t">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Wa6-Db-n7B" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gtW-he-4tH">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="JQm-rN-Nth" kind="relationship" relationship="viewControllers" id="cdi-ST-SJy"/>
+                        <segue destination="xeT-w9-6Fo" kind="relationship" relationship="viewControllers" id="dbz-uS-iec"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="keW-6Y-p8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-428" y="28"/>
+        </scene>
+        <!--Favoritos-->
+        <scene sceneID="064-1a-vjL">
+            <objects>
+                <navigationController title="Favoritos" automaticallyAdjustsScrollViewInsets="NO" id="xeT-w9-6Fo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favoritos" id="Ezc-KX-nn6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5DY-XR-Czh">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="U2L-rk-wVE" kind="relationship" relationship="rootViewController" id="4Xn-Pc-79Y"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P4O-9B-ibh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="790"/>
         </scene>
     </scenes>
 </document>

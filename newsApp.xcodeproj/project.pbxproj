@@ -22,6 +22,7 @@
 		F586FB2625CAFEB6006042CE /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586FB2525CAFEB6006042CE /* CustomError.swift */; };
 		F586FB2925CB1749006042CE /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586FB2725CB1749006042CE /* NewsTableViewCell.swift */; };
 		F586FB2A25CB1749006042CE /* NewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F586FB2825CB1749006042CE /* NewsTableViewCell.xib */; };
+		F5CD162425CE028300C2E4C6 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5CD162325CE028300C2E4C6 /* FavoriteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		F586FB2525CAFEB6006042CE /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		F586FB2725CB1749006042CE /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		F586FB2825CB1749006042CE /* NewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsTableViewCell.xib; sourceTree = "<group>"; };
+		F5CD162325CE028300C2E4C6 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoriteViewController.swift; path = ../../FavoriteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				F586FB0F25CAFA37006042CE /* LaunchScreen.storyboard */,
 				F51BFCF625CC6B6D00DBAC93 /* WebViewController.swift */,
 				F51BFCF725CC6B6D00DBAC93 /* WebViewController.xib */,
+				F5CD162325CE028300C2E4C6 /* FavoriteViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				F51BFCF825CC6B6D00DBAC93 /* WebViewController.swift in Sources */,
 				F586FB2425CAFEA2006042CE /* Result.swift in Sources */,
 				F586FB2925CB1749006042CE /* NewsTableViewCell.swift in Sources */,
+				F5CD162425CE028300C2E4C6 /* FavoriteViewController.swift in Sources */,
 				F586FB2025CAFE86006042CE /* Router.swift in Sources */,
 				F586FB1E25CAFC49006042CE /* News.swift in Sources */,
 				F586FB2225CAFE92006042CE /* Service.swift in Sources */,
